@@ -1,0 +1,20 @@
+
+<center><h2>Hay {{ count }} palabras en tu texto</h2>
+</center>
+
+<a href="{% url 'home' %}">Empezar de nuevo</a>
+
+<h4>Tu texto fue:</h4>
+{{ fulltext }}
+
+<h4>Conteo de palabras:</h4>
+
+{% for word, counttotal in sortedwords %}
+
+{{ word }} : {{ counttotal }}
+</br>
+{% endfor %}
+
+<footer>
+       <p> Derechos de autor <a href="{% url 'about' %}">Florencemon</a> 2023 - Mi sitio web </p>
+</footer>
